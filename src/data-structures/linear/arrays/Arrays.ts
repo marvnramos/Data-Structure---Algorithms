@@ -136,4 +136,14 @@ export class Arrays<T>{
          }
         return numbersArray;
     }
+
+    /**
+     * @description Update the value of the array at a specific index
+     * @param index
+     * @return Array<any>
+     */
+    public updateValueByIndex(index: number, value: any): Array<any> {
+        this._array[index] = value;
+        return this._array;
+    }
 }
