@@ -1,5 +1,4 @@
 export class Arrays<T>{
-    // any type array
     private _array: Array<T> = [];
       
     constructor(){};
@@ -19,7 +18,7 @@ export class Arrays<T>{
         return `Value [${deletedValue}] removed from the array`;
     }
 
-    
+
     public getArray(): Array<any> {
         return this._array;
     }
