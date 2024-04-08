@@ -13,7 +13,7 @@ export class Arrays<T>{
      * @returns string
      * @memberof Arrays
      */
-    public removeValue(): string {
+    public removeLastValue(): string {
         const deletedValue:any = this._array.pop();
         return `Value [${deletedValue}] removed from the array`;
     }
