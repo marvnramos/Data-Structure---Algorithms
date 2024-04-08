@@ -64,5 +64,74 @@ export class Arrays<T>{
     public getArrayLastValue(): any {
         return this._array[this._array.length-1];
     }
+
+    /**
+     * @description Sum the elements of the array and return the result
+     * @returns number The sum of the elements in the array
+     */
+    public sumArray(): number {
+        const numbersArray: Array<number> = this._array as Array<number>;
+        return numbersArray.reduce((acc, value) => acc + value, 0);
+    }
+
+    /**
+     * @description Find the max number in an array to display in the console
+     * @return number 
+     * @memberof Arrays
+     */
+    public findMaxNumber(): number {
+        let maxNumber: number = Number(this._array[0]) ;
+
+        for(let i = 0; i < this._array.length; i++){
+            if(Number(this._array[i]) > maxNumber){
+                maxNumber = Number(this._array[i]);
+            }
+        }
+        return maxNumber;
+    }
+    /**
+     * @description Find the min number in an array to display in the console
+     * @return number
+     * @memberof Arrays
+     */
+
+    public findMinNumber(): number {
+        let minNumber: number = Number(this._array[0]);
+        
+        for(let i = 0; i < this._array.length; i++){
+            if(Number(this._array[i]) < minNumber){
+                minNumber = Number(this._array[i]);
+            }
+        }
+        return minNumber;
+    }
+
+    /**
+    * @description Remove duplicates from an array and display the modified array in the console
+    * @returns Array<T>
+    * @memberof Arrays
+    *  */
+    public removeDuplicates(): Array<T> {
+        this._array.splice(0, this._array.length, ...(new Set(this._array)));
+        return this._array;
+    }
     
+    /**
+     * @description Sort an array of numbers to display in the console
+     * @returns Array<T>
+     * @memberof Arrays
+     */
+
+    public sortArray(): Array<T> {
+        for(let i = 0; i < this._array.length; i++){
+            for(let j = i + 1; j < this._array.length; j++){
+                 if(this._array[i] > this._array[j]){
+                     let temp: any = this._array[i];
+                     this._array[i] = this._array[j];
+                     this._array[j] = temp;
+                 }
+            }
+         }
+        return this._array;
+    }
 }
