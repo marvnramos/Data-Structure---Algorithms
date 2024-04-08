@@ -118,20 +118,22 @@ export class Arrays<T>{
     
     /**
      * @description Sort an array of numbers to display in the console
-     * @returns Array<T>
+     * @returns Array<numeber>
      * @memberof Arrays
      */
 
-    public sortArray(): Array<T> {
+    public sortArray(): Array<number> {
+        const numbersArray: Array<number> = this._array as Array<number>;
+        
         for(let i = 0; i < this._array.length; i++){
             for(let j = i + 1; j < this._array.length; j++){
-                 if(this._array[i] > this._array[j]){
-                     let temp: any = this._array[i];
-                     this._array[i] = this._array[j];
-                     this._array[j] = temp;
+                 if(numbersArray[i] > numbersArray[j]){
+                     let temp: number = numbersArray[i];
+                     numbersArray[i] = numbersArray[j];
+                     numbersArray[j] = temp;
                  }
             }
          }
-        return this._array;
+        return numbersArray;
     }
 }
