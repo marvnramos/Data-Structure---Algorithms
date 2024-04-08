@@ -1,0 +1,28 @@
+{
+  "name": "dsna",
+  "version": "1.0.0",
+  "description": "Data structures and algorithms with TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marvnramos/Data-Structure-and-Algorithms.git"
+  },
+  "keywords": [
+    "algorithms",
+    "data-structures",
+    "typescript"
+  ],
+  "author": "Marvin Ramos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marvnramos/Data-Structure-and-Algorithms/issues"
+  },
+  "homepage": "https://github.com/marvnramos/Data-Structure-and-Algorithms#readme",
+  "devDependencies": {
+    "ts-node": "10.9.2",
+    "typescript": "5.4.4"
+  }
+}
