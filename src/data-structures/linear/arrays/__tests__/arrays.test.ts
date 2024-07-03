@@ -1,4 +1,4 @@
-import { Arrays } from "./Arrays";
+import { Arrays } from "../Arrays";
 
 /**
  * Create an array of numbers
@@ -19,6 +19,23 @@ array.addNewValue(2);
 array.addNewValue(-7);
 array.addNewValue(10000);
 array.addNewValue(0);
+
+const value = 2;
+const array_test = array.getArray();
+/**
+ *    
+ */
+test('add an item to array', () => {
+    expect(array.addNewValue(value)).toBe(`Value [${value}] added to the array`);
+})
+
+test('remove an item from array', () => {
+    expect(array.removeLastValue()).toBe(`Value [${value}] removed from the array`)
+})
+
+test('get array ', ()=>{
+    expect(array.getArray().toString()).toBe(array_test.toString());
+})
 
 /**
  * @description Sum the elements of an array and display the result in the console
@@ -74,7 +91,7 @@ const findMinNumber = (array: Array<number>): void =>{
  * @param array 
  */
 const removeDuplicates = (array: Array<number>): void => {
-    array.splice(0, array.length, ...(new Set(array)));
+    array.splice(0, array.length, ...Array.from(new Set(array)));
     console.log(array)
 }
 // console.log(array.getArray()); // old array
