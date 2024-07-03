@@ -67,6 +67,18 @@ test('get length from array', () => {
 })
 
 /**
+ * @description Get array item by index
+ * As we know, array indices go from 0 to N-1; this means, when I want to get the 2nd value,
+ * in this case 315, I have to consider this. Therefore, the index of 315 will be 1 because the first index is 0.
+ *
+ * Note: N, when N equal the total of items in the array
+ */
+test('get array item by index', ()=>{
+    expect(array.getArrayValueByIndex(3)).toBe(38);
+})
+
+
+/**
  * @description Sum the elements of an array and display the result in the console
  * @param array 
  */
