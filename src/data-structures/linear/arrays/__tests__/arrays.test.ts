@@ -50,7 +50,10 @@ test('remove an item from array', () => {
     expect(array.removeLastValue()).toBe(`Value [${value}] removed from the array`)
 })
 
-test('get array ', ()=>{
+/**
+ * @description Get the modified array again; this time the array will not contain 2 as the last item.
+ */
+test('get array without 2 as last value ', ()=>{
     expect(array.getArray().toString()).toBe(array_test.toString());
 })
 
