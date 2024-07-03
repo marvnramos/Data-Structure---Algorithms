@@ -77,6 +77,25 @@ test('get array item by index', ()=>{
     expect(array.getArrayValueByIndex(3)).toBe(38);
 })
 
+/**
+ * @description
+ * Current array remains unchanged: [-1, 315, 2, 38, 98, 98, 10001, 10001, 9, 2, 2, 2, -7, 10000, 0]
+ * Since no modifications have been made yet, then, we go to get 0 as response.
+ */
+test("get array last value item", ()=>{
+    expect(array.getArrayLastValue()).toBe(0);
+})
+
+const string_array = new Arrays<string>();
+string_array.addNewValue('uwu')
+string_array.addNewValue('ewe')
+string_array.addNewValue('owo')
+string_array.addNewValue('nwn')
+
+
+test('get string[] last value', () => {
+    expect(string_array.getArrayLastValue()).toBe('nwn')
+})
 
 /**
  * @description Sum the elements of an array and display the result in the console
