@@ -47,7 +47,7 @@ test('get array with 2 new value', ()=>{
  */
 
 test('remove an item from array', () => {
-    expect(array.removeLastValue()).toBe(`Value [${value}] removed from the array`)
+    expect(array.removeLastValue()).toBe(`Value [${value}] removed from the array`);
 })
 
 /**
@@ -91,10 +91,10 @@ test("get array last value item", ()=>{
  * Define a new string array
  */
 const string_array = new Arrays<string>();
-string_array.addNewValue('uwu')
-string_array.addNewValue('ewe')
-string_array.addNewValue('owo')
-string_array.addNewValue('nwn')
+string_array.addNewValue('uwu');
+string_array.addNewValue('ewe');
+string_array.addNewValue('owo');
+string_array.addNewValue('nwn');
 
 /**
  * @description
@@ -106,5 +106,5 @@ string_array.addNewValue('nwn')
  *                                           -------------------------------------------
  */
 test('get string[] last value', () => {
-    expect(string_array.getArrayLastValue()).toBe('nwn')
+    expect(string_array.getArrayLastValue()).toBe('nwn');
 })
