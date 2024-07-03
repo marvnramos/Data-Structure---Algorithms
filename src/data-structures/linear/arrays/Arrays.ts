@@ -61,7 +61,7 @@ export class Arrays<T>{
      * @returns any
      * @memberof Arrays
      */
-    public getArrayLastValue(): any {
+    public getArrayLastValue(): T {
         return this._array[this._array.length-1];
     }
 
