@@ -58,6 +58,15 @@ test('get array without 2 as last value ', ()=>{
 })
 
 /**
+ * @description Get the array length
+ * Our current array looks like this: [-1, 315, 2, 38, 98, 98, 10001, 10001, 9, 2, 2, 2, -7, 10000, 0]
+ * Therefore, its length is the total number of items in it: 15
+ */
+test('get length from array', () => {
+    expect(array.getArrayLength()).toBe(15);
+})
+
+/**
  * @description Sum the elements of an array and display the result in the console
  * @param array 
  */
