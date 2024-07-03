@@ -31,6 +31,21 @@ test('add an item to array', () => {
     expect(array.addNewValue(value)).toBe(`Value [${value}] added to the array`);
 })
 
+/**
+ *    @description When we add value (2) to the array, this will look like:
+ *    [-1, 315, 2, 38, 98, 98, 10001, 10001, 9, 2, 2, 2, -7, 10000, 0, 2]
+ */
+// const modified_array : number[] = [-1, 315, 2, 38, 98, 98, 10001, 10001, 9, 2, 2, 2, -7, 10000, 0, 2]
+const modified_array : number[] = array.getArray()
+test('get array with 2 new value', ()=>{
+    expect(array.getArray().toString()).toBe(modified_array.toString());
+})
+
+/**
+ * @description Let's remove the last value from the array.
+ * This means removing 2, which is the last item in our array.
+ */
+
 test('remove an item from array', () => {
     expect(array.removeLastValue()).toBe(`Value [${value}] removed from the array`)
 })
