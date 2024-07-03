@@ -112,7 +112,7 @@ export class Arrays<T>{
     * @memberof Arrays
     *  */
     public removeDuplicates(): Array<T> {
-        this._array.splice(0, this._array.length, ...(new Set(this._array)));
+        this._array.splice(0, this._array.length, ...Array.from(new Set(this._array)));
         return this._array;
     }
     
