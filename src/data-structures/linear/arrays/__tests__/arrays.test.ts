@@ -86,13 +86,25 @@ test("get array last value item", ()=>{
     expect(array.getArrayLastValue()).toBe(0);
 })
 
+/**
+ * @description
+ * Define a new string array
+ */
 const string_array = new Arrays<string>();
 string_array.addNewValue('uwu')
 string_array.addNewValue('ewe')
 string_array.addNewValue('owo')
 string_array.addNewValue('nwn')
 
-
+/**
+ * @description
+ * Our string_array defined looks like ['uwu', 'ewe', 'owo', 'nwn']
+ *                                                            {☝️}
+ *                                           ___________________|_______________________
+ *                                           |  In this case, 'nwn' is our last value  |
+ *                                           |  so, we must receive 'nwn' as output.   |
+ *                                           -------------------------------------------
+ */
 test('get string[] last value', () => {
     expect(string_array.getArrayLastValue()).toBe('nwn')
 })
