@@ -108,3 +108,12 @@ string_array.addNewValue('nwn');
 test('get string[] last value', () => {
     expect(string_array.getArrayLastValue()).toBe('nwn');
 })
+
+/**
+ * @description
+ * Current array remains unchanged: [-1, 315, 2, 38, 98, 98, 10001, 10001, 9, 2, 2, 2, -7, 10000, 0]
+ * We must obtain the total summary of all these items in the array. Total is: 30560
+ */
+test('get total summary from array items', () =>{
+    expect(array.sumArray()).toBe(30560);
+})
