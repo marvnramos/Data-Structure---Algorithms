@@ -22,8 +22,10 @@ array.addNewValue(0);
 
 const value = 2;
 const array_test = array.getArray();
+
 /**
- *    
+ *    @description At this point, the array object looks like this:
+ *    array = [-1, 315, 2, 38, 98, 98, 10001, 10001, 9, 2, 2, 2, -7, 10000, 0]
  */
 test('add an item to array', () => {
     expect(array.addNewValue(value)).toBe(`Value [${value}] added to the array`);
